@@ -1,9 +1,12 @@
-import React, { Fragment, useEffect, lazy } from "react";
+import React, { Fragment, useEffect, Suspense } from "react";
 import Header from "../components/Header/Header";
-import Main from "../pages/Main/Main";
 import Footer from "../components/Footer/Footer";
 import ScrollReveal from "scrollreveal";
+import { useRoutes } from "react-router";
+import { Spin } from "antd";
+import routes from "../router/routes";
 export default function Layout() {
+  const element = useRoutes(routes);
   useEffect(() => {
     initTheme();
     const sr = ScrollReveal({
@@ -43,7 +46,13 @@ export default function Layout() {
   return (
     <Fragment>
       <Header></Header>
-      <Main></Main>
+      {/* <Routes>
+        <Route path="/home"></Route>
+        <Route path="/experience"></Route>
+        <Route path="/work"></Route>
+        <Route path="/about"></Route>
+      </Routes> */}
+      <Suspense fallback={<Spin></Spin>}>{element}</Suspense>
       <Footer></Footer>
     </Fragment>
   );

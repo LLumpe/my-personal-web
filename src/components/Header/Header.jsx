@@ -1,9 +1,13 @@
 import "./Header.css";
 import React, { useEffect, useState } from "react";
 import ThemeButton from "../ThemeButton/ThemeButton";
+import routes from "../../router/routes";
+import { useRoutes } from "react-router";
 export default function Header() {
   const [dom, setDom] = useState(null);
+  const routes1 = useRoutes(routes);
   useEffect(() => {
+    console.log(routes1);
     const $ = document.querySelector.bind(document);
     setDom({
       searchButton: $("#search-button"),
