@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.DragEffect{
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    border-radius: 6px;
+}
+.dragEffect_grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 30px;
+    background-color: aliceblue;
+    border: 2px solid rgba(5, 5, 5, 0.06);
+    border-radius: 6px;
+    overflow: auto;
+    padding: 30px;
+}
+.dragEffect_item{
+    /* width: 80px;
+    height: 80px; */
+    display: grid;
+    place-items: center;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid rgba(5, 5, 5, 0.06);
+    border-radius: 6px;
+    /* transition: 0.3s all; */
+}
+.dragEffect_item:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.dragEffect_item[data-selected="true"]{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: aquamarine;
+}

@@ -1,0 +1,12 @@
+.gptwords__data {
+  color: var(--text-color);
+  font-size: var(--h2-font-size);
+  font-family: var(--body-font);
+  font-weight: var(--font-semi-bold);
+}
+.gptwords__data[show="true"]::after {
+  margin-inline: 5px;
+  content: " ";
+  width: 0.5rem;
+  border-right: 0.5rem solid var(--convert-color);
+}

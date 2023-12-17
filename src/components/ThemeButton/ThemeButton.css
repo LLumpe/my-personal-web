@@ -1,0 +1,27 @@
+.themebutton__container {
+  width: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+.themebutton__content {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+  border-radius: 100px;
+  background-color: var(--convert-color);
+  padding: 2px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.themebutton__cicle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: var(--body-color);
+  transition: transform 0.4s, background-color 0.4s;
+}
+.themebutton__cicle-translate {
+  transform: translateX(1.5rem);
+}

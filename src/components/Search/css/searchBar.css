@@ -1,0 +1,24 @@
+.SearchBar{
+  width: 100%;
+  height: 200px;
+}
+.searchBar_container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-width: 2px 2px 0 2px; /* 上、左、右边框为2px实线黑色，底部边框为0 */
+  border-style: solid;
+  border-color: rgba(5, 5, 5, 0.06);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 10px;
+}
+.searchBar_container Input{
+  width: 80%;
+}
+.searchBar_container Button{
+  width: 80%;
+  margin-top: 20px;
+}
